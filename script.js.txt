@@ -1,0 +1,31 @@
+gsap.registerPlugin(ScrollTrigger);
+
+// Intro animation
+gsap.to(".headline", {
+  opacity: 1,
+  y: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.to(".stat", {
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  stagger: 0.2,
+  delay: 0.6,
+  ease: "power2.out"
+});
+
+// Scroll animation
+gsap.to(".hero-img", {
+  y: -200,
+  scale: 1.05,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
